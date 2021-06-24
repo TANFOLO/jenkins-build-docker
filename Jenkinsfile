@@ -9,7 +9,7 @@ node {
         app = docker.build("xavki/nginx")
     }
     stage('Run image'){
-        docker.image('xavki/nginx').withRun('-p 80:80') {c -> 
+        docker.image('xavki/nginx').withRun('-p 8083:80') {c -> 
         
             bat 'docker ps'
             bat 'curl localhost'
